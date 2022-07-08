@@ -1,0 +1,377 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model abbookauth {
+  aid    Int?
+  idbook Int?
+  idauth Int?
+
+  @@ignore
+}
+
+model about {
+  id         Int     @id @default(autoincrement())
+  title      String? @db.VarChar(255)
+  text       String? @db.Text
+  partsTitle String? @db.VarChar(511)
+  parts      String? @db.LongText
+}
+
+model about_us {
+  id         Int     @id @default(autoincrement())
+  title      String? @db.VarChar(511)
+  text       String? @db.Text
+  partsTitle String? @db.VarChar(511)
+  parts      String? @db.LongText
+  part1      String? @db.Text
+  part2      String? @db.Text
+  part3      String? @db.Text
+  part4      String? @db.Text
+  part5      String? @db.Text
+  part6      String? @db.Text
+  part7      String? @db.Text
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model aspirantura {
+  img            String? @db.VarChar(255)
+  body           String? @db.Text
+  directions     String? @db.LongText
+  links          String? @db.LongText
+  docs_text_1    String? @db.Text
+  docs_text_2    String? @db.Text
+  license_images String? @db.LongText
+  contacts       String? @db.Text
+  location       String? @db.VarChar(1023)
+  cost           String? @db.Text
+  textBoxes      String? @db.LongText
+
+  @@ignore
+}
+
+model authors {
+  id   Int     @id @default(autoincrement())
+  name String? @db.VarChar(255)
+  html String? @db.Text
+}
+
+model book {
+  id          Int     @id @default(autoincrement())
+  title       String? @db.VarChar(255)
+  text        String? @db.Text
+  img         String? @db.VarChar(255)
+  file        String? @db.VarChar(255)
+  year        String? @db.VarChar(23)
+  subtitle    String? @db.VarChar(255)
+  html        String? @db.Text
+  hits        String? @db.VarChar(255)
+  catid       String? @db.VarChar(45)
+  isbn        String? @db.VarChar(255)
+  url         String? @db.VarChar(255)
+  url_label   String? @db.VarChar(255)
+  date_insert String? @db.VarChar(255)
+  note        String? @db.Text
+  created_by  Int?
+  unit        String? @db.VarChar(255)
+  language    String? @db.VarChar(255)
+  doi         String? @db.VarChar(511)
+  issn        String? @db.VarChar(255)
+  authors     String? @db.Text
+  unit_id     Int?
+  links       String? @db.LongText
+}
+
+model carousel {
+  id      Int  @id @default(autoincrement())
+  news_id Int?
+}
+
+model categories {
+  id          Int     @id @default(autoincrement())
+  parent_id   Int?
+  title       String? @db.VarChar(255)
+  description String? @db.Text
+}
+
+model contacts {
+  id           Int     @id @default(autoincrement())
+  name         String? @db.VarChar(255)
+  mobile_phone String? @db.VarChar(255)
+  work_phone   String? @db.VarChar(255)
+  email        String? @db.VarChar(255)
+  address      String? @db.VarChar(255)
+}
+
+model council {
+  id       Int     @id @default(autoincrement())
+  name     String? @db.VarChar(128)
+  position String? @db.VarChar(256)
+  phone    String? @db.VarChar(64)
+  email    String? @db.VarChar(64)
+}
+
+model documents {
+  id         Int     @id @default(autoincrement())
+  category   String? @db.VarChar(256)
+  name       String? @db.VarChar(256)
+  format     String? @db.VarChar(64)
+  url        String? @db.VarChar(128)
+  created_by String? @db.VarChar(127)
+  priority   Int?    @default(10)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model dpo {
+  img       String? @db.VarChar(255)
+  body      String? @db.Text
+  text1     String? @db.Text
+  text2     String? @db.Text
+  text3     String? @db.Text
+  text4     String? @db.Text
+  contacts  String? @db.Text
+  location  String? @db.VarChar(1023)
+  textBoxes String? @db.LongText
+
+  @@ignore
+}
+
+model education {
+  id         Int     @id @default(autoincrement())
+  year       String? @db.VarChar(63)
+  text       String? @db.Text
+  person_id  Int?
+  created_by String? @db.VarChar(127)
+}
+
+model education_plus {
+  id         Int     @id @default(autoincrement())
+  year       String? @db.VarChar(63)
+  text       String? @db.Text
+  person_id  Int?
+  created_by String? @db.VarChar(127)
+}
+
+model events {
+  id    Int     @id @default(autoincrement())
+  title String? @db.VarChar(511)
+  body  String? @db.Text
+  tag   String? @db.VarChar(255)
+  date  String? @db.VarChar(255)
+  time  String? @db.VarChar(255)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model graduate {
+  text String? @db.Text
+  img  String? @db.VarChar(255)
+
+  @@ignore
+}
+
+model library {
+  id         Int     @id @default(autoincrement())
+  book_title String? @db.VarChar(255)
+  book_img   String? @db.VarChar(255)
+  book_file  String? @db.VarChar(255)
+  author_id  Int?
+  created_by String? @db.VarChar(127)
+}
+
+model management {
+  id       Int     @id @default(autoincrement())
+  name     String? @db.VarChar(64)
+  position String? @db.VarChar(64)
+  phone    String? @db.VarChar(64)
+  email    String? @db.VarChar(64)
+  unit     String? @db.VarChar(255)
+  img      String? @db.VarChar(255)
+  about    String? @db.Text
+  links    String? @db.VarChar(255)
+}
+
+model news {
+  id         Int     @id @default(autoincrement())
+  img        String? @db.VarChar(256)
+  title      String? @db.VarChar(256)
+  tag        String? @db.VarChar(128)
+  date       String? @db.VarChar(64)
+  body       String? @db.MediumText
+  created_by String? @db.VarChar(127)
+  subtitle   String? @db.Text
+  lang       String? @default("ru-RU") @db.VarChar(15)
+}
+
+model papers {
+  id          Int     @id @default(autoincrement())
+  paper_title String? @db.Text
+  paper_url   String? @db.VarChar(255)
+  author_id   Int?
+  created_by  String? @db.VarChar(127)
+}
+
+model partners {
+  id   Int     @id @default(autoincrement())
+  name String? @db.VarChar(128)
+  img  String? @db.VarChar(128)
+  link String? @db.VarChar(128)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model pinned_news {
+  id Int?
+
+  @@ignore
+}
+
+model research_directions {
+  id         Int     @id @default(autoincrement())
+  body       String? @db.Text
+  unit_id    Int?
+  created_by String? @db.VarChar(127)
+}
+
+model unions {
+  id    Int     @id @default(autoincrement())
+  title String? @db.VarChar(255)
+  users String? @db.LongText
+}
+
+model units {
+  id         Int     @id @default(autoincrement())
+  title      String? @db.VarChar(256)
+  name       String? @db.VarChar(64)
+  img        String? @db.VarChar(128)
+  body       String? @db.MediumText
+  directions String? @db.LongText
+  visible    Boolean @default(true)
+  users      String? @db.LongText
+}
+
+model users {
+  uid            Int      @id @default(autoincrement())
+  name           String?  @db.VarChar(64)
+  password       String?  @db.VarChar(128)
+  admin          Boolean?
+  phone          String?  @db.VarChar(255)
+  email          String?  @unique(map: "email") @db.VarChar(255)
+  position       String?  @db.VarChar(255)
+  img            String?  @db.VarChar(255)
+  visible        Boolean  @default(true)
+  enabled        Boolean  @default(true)
+  education      String?  @db.LongText
+  educationPlus  String?  @db.LongText
+  achievements   String?  @db.LongText
+  vkr            String?  @db.LongText
+  courses        String?  @db.LongText
+  participation  String?  @db.LongText
+  books          String?  @db.LongText
+  exp            String?  @db.LongText
+  expGeneral     String?  @db.VarChar(63)
+  expScience     String?  @db.VarChar(63)
+  expTeacher     String?  @db.VarChar(63)
+  teachingExp    String?  @db.LongText
+  career         String?  @db.LongText
+  membership     String?  @db.LongText
+  languages      String?  @db.LongText
+  specialization String?  @db.LongText
+  info           String?  @db.Text
+  seen_revision  Int?     @default(0)
+  admin_seen     Int?     @default(1)
+  privatePhone   String?  @db.VarChar(255)
+  privateEmail   String?  @db.VarChar(255)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model young_scientists {
+  img  String? @db.VarChar(255)
+  body String? @db.Text
+
+  @@ignore
+}
+
+model analytics {
+  id   Int     @id @default(autoincrement())
+  img  String? @db.VarChar(255)
+  body String? @db.Text
+}
+
+model analytics_material {
+  id       Int     @id @default(autoincrement())
+  title    String? @db.VarChar(1023)
+  date     String? @db.VarChar(63)
+  hits     String? @db.VarChar(255)
+  tldr     String? @db.Text
+  subject  String? @db.VarChar(255)
+  customer String? @db.VarChar(255)
+  authors  String? @db.VarChar(1023)
+  file     String? @db.VarChar(255)
+  html     String? @db.Text
+  tags     String? @db.VarChar(511)
+}
+
+model orders {
+  id    Int     @id @default(autoincrement())
+  title String? @db.VarChar(1023)
+  name  String? @db.VarChar(511)
+  path  String? @db.VarChar(511)
+}
+
+model menu {
+  id       Int     @id @default(autoincrement()) @db.UnsignedInt
+  link     String  @db.VarChar(255)
+  sublinks String  @db.Text
+  order    Int     @default(1)
+  show     Boolean @default(true)
+  lang     String  @default("ru-RU") @db.VarChar(255)
+  linkname String  @db.VarChar(255)
+}
+
+model address_book {
+  id     Int     @id @default(autoincrement())
+  userId Int
+  phone  String? @db.VarChar(255)
+  email  String? @db.VarChar(255)
+}
+
+model subscriptions {
+  id    Int     @id @default(autoincrement())
+  email String? @unique(map: "email") @db.VarChar(255)
+}
+
+model expertise {
+  id          Int     @id @default(autoincrement())
+  img         String? @db.VarChar(511)
+  body        String? @db.Text
+  cooperation String? @db.LongText
+  partners    String? @db.LongText
+  contacts    String? @db.Text
+  location    String? @db.VarChar(1023)
+}
+
+model scientific_services {
+  id         Int     @id @default(autoincrement())
+  heading    String? @db.VarChar(511)
+  subheading String? @db.Text
+}
+
+model service_application {
+  id           Int     @id @default(autoincrement())
+  service_id   Int
+  organization String? @db.VarChar(255)
+  name         String? @db.VarChar(255)
+  email        String? @db.VarChar(255)
+  body         String? @db.Text
+}
+
+model trade_union {
+  id   Int     @id @default(autoincrement())
+  img  String? @db.VarChar(255)
+  body String? @db.Text
+}
