@@ -33,7 +33,7 @@
 	</a>
 	<div class="col-span-10 pr-10 lg:col-span-5 flex gap-5 justify-end items-center">
 		<span class="hidden md:inline-block">
-			<Link name={'Личный кабинет'} link={'/loginV2'} />
+			<Link name={'Личный кабинет'} link={'https://www.ifes-ras.ru/loginV2'} />
 		</span>
 		<div class="flex items-center justify-center space-x-3 mb-1">
 			<a class="hover:scale-105 transition" href="https://www.ifes-ras.ru/ru-RU" rel="external">

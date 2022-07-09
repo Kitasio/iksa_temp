@@ -35,7 +35,7 @@
 
 <div class="mt-16 lg:mt-28 space-y-5">
 	<h2 class="namer">
-		<Link name="НОВОСТИ ИНСТИТУТА" link="/ru-RU/news" />
+		<Link name="НОВОСТИ ИНСТИТУТА" link="https://www.ifes-ras.ru/ru-RU/news" />
 		<span on:click="{() => showModal = true}" class="text-teal-700 cursor-pointer hover:underline">[ПОДПИСАТЬСЯ]</span>
 	</h2>
 	<div class="gap-5 sm:space-y-0 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -67,7 +67,7 @@
 	</div>
 
 	<h2 class="namer mt-10 xl:mt-0 xl:col-span-3 xl:row-start-1">
-		<Link name="БИБЛИОТЕКА ИНСТИТУТА" link="/ru-RU/library" />
+		<Link name="БИБЛИОТЕКА ИНСТИТУТА" link="https://www.ifes-ras.ru/ru-RU/library" />
 	</h2>
 	<div class="grid gap-5 md:grid-cols-2 md:grid-rows-2 xl:col-span-3 2xl:grid-cols-3">
 		{#each books as i (i.id)}
@@ -89,13 +89,13 @@
 
 <div class="my-16 lg:mt-28 lg:space-y-0 grid gap-5 grid-cols-5">
 	<h2 class="namer mt-10 lg:mt-0 col-span-5 lg:col-span-3 xl:col-span-2 lg:row-start-1">
-		<Link name="АСПИРАНТУРА" link="/ru-RU/graduate" />
+		<Link name="АСПИРАНТУРА" link="https://www.ifes-ras.ru/ru-RU/graduate" />
 	</h2>
 	<div class="col-span-5 md:col-span-4 lg:col-span-3 xl:col-span-2 md:row-span-2">
 		<GradBox />
 	</div>
 	<h2 class="namer mt-10 lg:mt-0 col-span-5 lg:col-span-3 xl:col-span-2 xl:col-start-4 lg:row-start-1">
-		<Link name="СОТРУДНИЧЕСТВО" link="/" />
+		<Link name="СОТРУДНИЧЕСТВО" link="https://www.ifes-ras.ru/" />
 	</h2>
 	<a href="/" class="p-5 border border-iksa-900 bg-white hover:shadow-border transition col-span-5 md:col-span-4 lg:col-start-4 lg:col-end-5 md:row-span-2">
 		<p class="font-semibold text-sm break-words">КООРДИНАЦИОННЫЙ СОВЕТ ПО КИТАЮ И СТРАНАМ ВОСТОЧНОЙ И ЮГО-ВОСТОЧНОЙ АЗИИ</p>
