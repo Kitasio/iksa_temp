@@ -4,7 +4,7 @@
 
 <img
 	on:click={() => ($hoveredPanel = !$hoveredPanel)}
-	class="fixed z-30 bottom-4 right-4 m-3 lg:hidden w-10 cursor-pointer"
+	class="z-50 absolute lg:hidden w-10 h-10 cursor-pointer"
 	src="/images/icons/menu.svg"
 	alt=""
 />

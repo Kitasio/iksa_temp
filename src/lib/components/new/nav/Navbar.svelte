@@ -3,6 +3,7 @@
 	import { links } from '$lib/links';
 	import Link from '$lib/components/new/links/Link.svelte';
 	import Panel from '$lib/components/new/nav/Panel.svelte';
+	import Burger from './Burger.svelte';
 
 	const hoverLink = (link: any) => {
 		if ($activeLink != link && link['sublinks'].length) {
@@ -17,9 +18,14 @@
 
 <div class="py-5 grid grid-cols-12 bg-iksa-50 hover:bg-iksa-100 transition duration-300">
 	<Panel />
-	<div class="hidden lg:flex px-10 items-center justify-between text-sm xl:text-base col-span-5 xl:pr-20 2xl:pr-32">
+	<div
+		class="hidden lg:flex px-10 items-center justify-between text-sm xl:text-base col-span-5 xl:pr-20 2xl:pr-32"
+	>
 		{#each links as link}
-			<span class={link == $activeLink && $hoveredPanel ? "z-20 text-teal-700 underline": "z-20"} on:mouseenter={() => hoverLink(link)}>
+			<span
+				class={link == $activeLink && $hoveredPanel ? 'z-20 text-teal-700 underline' : 'z-20'}
+				on:mouseenter={() => hoverLink(link)}
+			>
 				<Link link={link.link} name={link.linkname} />
 			</span>
 		{/each}
@@ -31,7 +37,7 @@
 			alt="logo new"
 		/>
 	</a>
-	<div class="col-span-10 pr-10 lg:col-span-5 flex gap-5 justify-end items-center">
+	<div class="col-span-8 pr-10 lg:col-span-5 flex gap-5 justify-end items-center">
 		<span class="hidden md:inline-block">
 			<Link name={'Личный кабинет'} link={'https://www.ifes-ras.ru/loginV2'} />
 		</span>
@@ -47,4 +53,7 @@
 			</a>
 		</div>
 	</div>
+	<span class="col-sapn-1 flex items-center justify-end">
+		<Burger />
+	</span>
 </div>
