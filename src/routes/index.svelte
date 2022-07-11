@@ -10,6 +10,7 @@
 
 	export let news: news[];
 	export let books: book[];
+	export let pinned: any[];
 
 	let showModal = false;
 </script>
@@ -29,7 +30,7 @@
 		ИНСТИТУТ КИТАЯ И&nbsp;СОВРЕМЕННОЙ АЗИИ РАН ОСНОВАН В&nbsp;1966&nbsp;ГОДУ
 	</h1>
 	<span class="col-span-3">
-		<Main news={news[0]} />
+		<Main news={pinned[0]} />
 	</span>
 </div>
 
@@ -39,7 +40,7 @@
 		<span on:click="{() => showModal = true}" class="text-teal-700 cursor-pointer hover:underline">[ПОДПИСАТЬСЯ]</span>
 	</h2>
 	<div class="gap-5 sm:space-y-0 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-		{#each news.slice(1) as i (i.id)}
+		{#each news as i (i.id)}
 			<NewsBox news={i} />
 		{/each}
 	</div>
