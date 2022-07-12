@@ -23,13 +23,13 @@
 		<Subscribe on:close={() => (showModal = false)} />
 	</ModalGeneric>
 {/if}
-<div class="lg:grid grid-cols-5 gap-5">
+<div class="2xl:grid grid-cols-5 gap-5">
 	<h1
-		class="col-span-2 mb-5 lg:mb-0 text-xl font-semibold md:text-3xl lg:text-4xl xl:text-5xl pr-10 2xl:pr-32 md:tracking-wide"
+		class="col-span-1 mb-5 2xl:mb-0 font-semibold text-xl lg:text-2xl xl:text-3xl md:tracking-wide"
 	>
-		ИНСТИТУТ КИТАЯ <span class="text-lg font-medium md:text-2xl lg:text-3xl xl:text-4xl">И&nbsp;СОВРЕМЕННОЙ АЗИИ РАН</span> <br><span class="text-base md:text-xl lg:text-2xl xl:text-3xl font-normal text-gray-600">ОСНОВАН В&nbsp;1966&nbsp;ГОДУ</span>
+		ИНСТИТУТ КИТАЯ <span class="font-medium text-xl xl:text-2xl">И&nbsp;СОВРЕМЕННОЙ АЗИИ РАН</span> <br><span class="text-base md:text-lg lg:text-xl xl:text-2xl font-normal text-gray-600">ОСНОВАН В&nbsp;1966&nbsp;ГОДУ</span>
 	</h1>
-	<span class="col-span-3">
+	<span class="col-span-4">
 		<Main news={pinned[0]} />
 	</span>
 </div>
