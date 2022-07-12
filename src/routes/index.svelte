@@ -25,9 +25,9 @@
 {/if}
 <div class="lg:grid grid-cols-5 gap-5">
 	<h1
-		class="col-span-2 mb-5 lg:mb-0 text-xl font-medium md:text-3xl lg:text-4xl xl:text-5xl pr-10 2xl:pr-32 md:tracking-wide"
+		class="col-span-2 mb-5 lg:mb-0 text-xl font-semibold md:text-3xl lg:text-4xl xl:text-5xl pr-10 2xl:pr-32 md:tracking-wide"
 	>
-		ИНСТИТУТ КИТАЯ И&nbsp;СОВРЕМЕННОЙ АЗИИ РАН ОСНОВАН В&nbsp;1966&nbsp;ГОДУ
+		ИНСТИТУТ КИТАЯ <span class="text-lg font-medium md:text-2xl lg:text-3xl xl:text-4xl">И&nbsp;СОВРЕМЕННОЙ АЗИИ РАН</span> <br><span class="text-base md:text-xl lg:text-2xl xl:text-3xl font-normal text-gray-600">ОСНОВАН В&nbsp;1966&nbsp;ГОДУ</span>
 	</h1>
 	<span class="col-span-3">
 		<Main news={pinned[0]} />
@@ -47,7 +47,7 @@
 </div>
 
 <div class="mt-16 lg:mt-28 lg:space-y-0 grid gap-5 xl:grid-cols-5">
-	<h2 class="namer xl:col-span-2 xl:row-start-1">КОНФЕРЕНЦИИ ИНСТИТУТА</h2>
+	<h2 class="namer xl:col-span-2 xl:row-start-1">Мероприятия</h2>
 	<div class="grid place-content-stretch grid-cols-1 gap-5 xl:col-span-2 lg:mr-32">
 		<div
 			class="p-5 flex flex-col justify-between border border-iksa-900 bg-white hover:shadow-border transition"
@@ -68,7 +68,7 @@
 	</div>
 
 	<h2 class="namer mt-10 xl:mt-0 xl:col-span-3 xl:row-start-1">
-		<Link name="БИБЛИОТЕКА ИНСТИТУТА" link="https://www.ifes-ras.ru/ru-RU/library" />
+		<Link name="Издания и документы" link="https://www.ifes-ras.ru/ru-RU/library" />
 	</h2>
 	<div class="grid gap-5 md:grid-cols-2 md:grid-rows-2 xl:col-span-3 2xl:grid-cols-3">
 		{#each books as i (i.id)}
@@ -96,7 +96,7 @@
 		<GradBox />
 	</div>
 	<h2 class="namer mt-10 lg:mt-0 col-span-5 lg:col-span-3 xl:col-span-2 xl:col-start-4 lg:row-start-1">
-		<Link name="СОТРУДНИЧЕСТВО" link="https://www.ifes-ras.ru/" />
+		<Link name="Партнёрства" link="https://www.ifes-ras.ru/" />
 	</h2>
 	<a href="/" class="p-5 border border-iksa-900 bg-white hover:shadow-border transition col-span-5 md:col-span-4 lg:col-start-4 lg:col-end-5 md:row-span-2">
 		<p class="font-semibold text-sm break-words">КООРДИНАЦИОННЫЙ СОВЕТ ПО КИТАЮ И СТРАНАМ ВОСТОЧНОЙ И ЮГО-ВОСТОЧНОЙ АЗИИ</p>

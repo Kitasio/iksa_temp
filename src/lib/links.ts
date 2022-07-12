@@ -17,18 +17,18 @@ export const links = [
     },
     {
         link: '',
-        linkname: 'Образование',
-        sublinks: [
-            {link: 'https://www.ifes-ras.ru/ru-RU/graduate', linkname: 'Аспирантура'},
-            {link: 'https://www.ifes-ras.ru/ru-RU/dpo', linkname: 'Дополнительное образование'},
-        ]
-    },
-    {
-        link: '',
         linkname: 'Наука',
         sublinks: [
             {link: 'https://www.ifes-ras.ru/ru-RU/analytics', linkname: 'Аналитические материалы'},
             {link: 'https://www.ifes-ras.ru/ru-RU/expertise', linkname: 'Научная экспертиза'},
+        ]
+    },
+    {
+        link: '',
+        linkname: 'Образование',
+        sublinks: [
+            {link: 'https://www.ifes-ras.ru/ru-RU/graduate', linkname: 'Аспирантура'},
+            {link: 'https://www.ifes-ras.ru/ru-RU/dpo', linkname: 'Дополнительное образование'},
         ]
     },
     {
